@@ -22,4 +22,10 @@ identity mapping = skip connections mit wenig layern
 1. Wie funktionieren Joint Histograms und was sagen sie aus?
 2. Was passiert in dieser Zeile 
 ssd[idx] = torch.sum((feat_patch_fixed - feat_displacements)**2).squeeze() 
-3. Warum gibt es mehrere Branches? 
+3. Warum gibt es mehrere Branches?
+
+## Exercise 6
+
+1. Was macht der Decoder/Encoder? Encoder: extrahiert Features und stellt sie im niedrigdimensionalen Raum dar (Downsampling); Decoder: Nimmt die Normalverteilung aus dem Latent space und regeneriert daraus das Bild?
+3.  Was ist das besondere an einem VAE? --> Normalverteilung im Latenten Raum
+4. Warum brauchen wir KLD Loss? --> damit wir eine Normalverteilung im Latenten Raum bekommen. Nur L1 Loss kann zu großen Abweichungen führen
